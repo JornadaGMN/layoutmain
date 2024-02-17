@@ -1,0 +1,35 @@
+@import url('./style.css');
+
+
+
+section.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section.container .title {
+    color: var(--cor-1);
+}
+
+
+section.container p {
+    font-size: var(--fonte-size-p-section);
+    font-weight: 100;
+    color: var(--cor-1);
+    margin-bottom: 100px;
+}
+
+
+section.container a { 
+    width: 200px;
+    font-size: var(--fonte-size-button-section);
+    text-align: center;
+    padding: 10px 50px;
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--cor-2);
+    background-color: var(--cor-4);
+    border-radius: 10px;
+}
