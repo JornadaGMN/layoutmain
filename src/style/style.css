@@ -1,0 +1,699 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: poppins;
+    font-size: 62.5%;
+}
+
+:root {
+    --cor-fundo-site: #1b1a1a;
+    --cor-1: #fff;
+    --cor-2: #000;
+    --cor-3: #ff0000;
+    --cor-4: #ffd046;
+    --shadow: 1px 1px 4px #131313;
+    --cor-botao-1: #0f36e2;
+    --cor-botao-2: #ffffff;
+
+    --cor-textos-pequenos-1: white;
+    --cor-textos-pequenos-2: #000;
+    --cor-titulo: #ffd046;
+
+
+    --tanho-fonte-1: 4rem;
+    --tanho-fonte-2: 1.8rem;
+    --tanho-fonte-3: 7rem;
+
+    /* FONT SIZE LOGO */
+    --fonte-size-logo: 3.2rem;
+    --fonte-size-logo-footer: 2.2rem;
+    
+    /* FONT SIZE MENU */
+    --fonte-size-menu: 1.5rem;
+    
+    /* FONT SIZE BUTTONS */
+    --fonte-size-button-section: 1.5rem;
+
+    
+    
+    --fonte-size-span-logo: 1.5rem;
+    --fonte-size-p-section: 1.5rem;
+
+}
+
+
+/* ----------------------------------
+ * GLOBAIS 
+ * ----------------------------------
+*/
+
+a {
+    text-decoration: none;
+}
+section {
+    height: 100vh;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.title {
+    font-size: 5.5rem;
+    text-shadow: 1px 1px 2px #131313;
+}
+
+/* ----------------------------------
+ * CORPO DO SITE 
+ * ----------------------------------
+*/
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-fundo-site);
+}
+
+/* ----------------------------------
+ * HEADER
+ * ----------------------------------
+*/
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;    
+    background-color: var(--cor-fundo-site);
+    box-shadow: 1px 1px 4px #131313;
+}
+
+header .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo h1 {
+    color: var(--cor-titulo);
+    font-size: var(--fonte-size-logo);
+}
+
+.logo span {
+    color: var(--cor-1);
+    font-size: var(--fonte-size-logo);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+header .btn-menu-mobile {
+    display: none;
+    border: none;
+    background-color: transparent;
+}
+
+header .btn-menu-mobile i {
+    color: var(--cor-1);
+    font-size: 1.7rem;
+}
+
+nav ul li a{
+    color: var(--cor-1);
+    text-decoration: none;
+    font-size: var(--fonte-size-menu);
+    font-weight: 200;
+}
+
+nav ul li a:hover {
+    color: var(--cor-titulo);
+}
+
+/* ----------------------------------
+ * SECTION-1
+ * ----------------------------------
+*/
+.sec-1 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+   
+}
+
+.sec-1 .card-left img {
+    width: 100%;
+    max-width: 500px;
+    min-width: 300px;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+.sec-1 .card-right {
+    max-width: 500px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 30px;
+}
+
+.sec-1 .card-right p {
+    font-size: var(--fonte-size-p-section);
+    font-weight: 100;
+    width: 100%;
+    color: var(--cor-1);
+}
+
+.sec-1 .card-right a {
+    width: 200px;
+    font-size: var(--fonte-size-button-section);
+    text-align: center;
+    padding: 10px 50px;
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--cor-2);
+    background-color: var(--cor-4);
+    border-radius: 10px;
+}
+
+/* ----------------------------------
+ * SECTION-2
+ * ----------------------------------
+*/
+section.sec-2 {
+    background-color: white;
+}
+
+.sec-2 .container {
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sec-2 .container .cards-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 40px;
+    min-width: 100px;
+    width: 100%;
+}
+
+.sec-2 .container .cards-products .item-card {
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 440px;
+    width: 100%;
+    min-width: 100px;
+    box-shadow: 1px 1px 2px #131313a2;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+
+.sec-2 .container .cards-products img{
+    max-width: 300px;
+    min-width: 50px;
+    min-height: 10px;
+    width: 100%;
+    height: 100%;
+}
+.sec-2 .container .cards-products a{
+    padding: 10px 39px;
+    font-size: var(--fonte-size-button-section);
+    text-align: center;
+    color: var(--cor-1);
+    background-color: var(--cor-2);
+    border-radius: 10px;
+    
+}
+
+
+/* ----------------------------------
+ * SECTION-3
+ * ----------------------------------
+*/
+.sec-3 .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sec-3 .container h1 {
+    color: var(--cor-1);
+}
+
+.sec-3 .container .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.sec-3 .card-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 700px;
+    padding: 0 70px;
+}
+
+.sec-3 .card-left p {
+    font-size: var(--fonte-size-p-section);
+    font-weight: 100;
+    color: var(--cor-1);
+}
+
+.sec-3 .card-left a {
+    width: 200px;
+    font-size: var(--fonte-size-button-section);
+    text-align: center;
+    padding: 10px 50px;
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--cor-2);
+    background-color: var(--cor-4);
+    border-radius: 10px;
+}
+
+.sec-3 .card-right img {
+    max-width: 600px;
+    min-width: 350px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+
+/* ----------------------------------
+ * SECTION-4
+ * ----------------------------------
+*/
+section.sec-4 {
+    background-color: white;
+    height: 95vh;
+}
+
+.sec-4 .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.sec-4 .container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* flex-wrap: wrap; */
+    width: 100%;
+}
+
+.sec-4 img {
+    max-width: 500px;
+    min-width: 100px;
+    width: 100%;
+}
+
+.bg-color-form {
+    max-width: 450px;
+    min-width: 100px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffd046;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px #131313a2;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form .content {
+    display: flex;
+    gap: 5px;
+}
+
+form h2 {
+    font-size: 1.8rem;
+}
+
+input {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    max-width: 200px;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+input.cnpj {
+    width: 100%;
+    max-width: 500px;
+}
+
+form textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+form button {
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #1b1a1a;
+    color: var(--cor-1);
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #000000;
+}
+
+/* ----------------------------------
+ * FOOTER
+ * ----------------------------------
+*/
+footer .container {
+    height: calc(5vh);
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .logo-footer a {
+    text-decoration: none;
+}
+
+footer .logo-footer a h1 {
+    color: var(--cor-titulo);
+    font-size: var(--fonte-size-logo-footer);
+}
+footer .logo-footer a h1 span {
+    color: var(--cor-1);
+    font-size: var(--fonte-size-logo-footer);
+}
+
+footer .container span {
+    font-size: 1rem;
+    color: rgb(139, 139, 139);
+}
+
+
+/* ----------------------------------
+ * MEDIA QUERY 768px
+ * ----------------------------------
+ */
+
+@media (max-width: 768px) {
+
+    /* 
+     * HEADER
+     */
+    header .nav-bar {
+        display: none;
+    }
+    
+    header .nav-bar ul {
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        right: -100%;
+        background-color: var(--cor-fundo-site);
+        width: 35vw;
+        height: 100vh;
+        padding: 1.6rem;
+        animation-duration: .5s;
+        z-index: 20;
+    }
+
+    @keyframes show-bar {
+        from {right: -100%;}
+        top {right: 0;}
+    }
+    
+    header .nav-bar a {
+        padding: 15px 83% 4px 0;
+    }
+
+    header .btn-menu-mobile {
+        display: block;
+        text-align: end;
+        height: 36px;
+        padding-right: 20px;
+    }
+
+    
+    /* 
+    * SEC-1
+    */
+    .sec-1 .container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .sec-1 .card-right {
+        padding: 0;
+    }
+    /* 
+    * SEC-2
+    */
+    .sec-2 .container .cards-products {
+        gap: 15px;
+    }
+    
+    .sec-2 .container .cards-products .item-card {
+        max-width: 220px;
+        min-width: 100px;
+    }
+    
+    .sec-2 .container .cards-products a {
+        font-size: 1rem;
+    }
+    
+    /* 
+    * SEC-3
+    */
+    .sec-3 .container .content {
+        flex-wrap: wrap-reverse;
+        gap: 20px;
+    }
+    
+    .sec-3 .card-left{
+        padding: 0;
+    }
+    
+    .sec-3 .card-right img {
+        max-width: 400px;
+    }
+    
+    /* 
+    * SEC-4
+    */
+    .sec-4 img {
+        display: none;
+    }
+
+}
+
+/* ----------------------------------
+ * MEDIA QUERY 678px
+ * ----------------------------------
+ */
+
+ @media (max-width: 678px) {
+     /* 
+     * SEC-2
+     */
+    .sec-2 .container .cards-products {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .sec-2 .container .cards-products .item-card {
+        max-width: 170px;
+    }
+
+    .sec-2 .container .cards-products a {
+        font-size: .7rem;
+    }
+}
+
+/* ----------------------------------
+ * MEDIA QUERY 448px
+ * ----------------------------------
+ */
+@media (max-width: 448px) {
+
+    /* 
+    * GLOBAL
+    */
+    .title {
+        font-size: 3.5rem;
+    }
+    
+    
+    /* 
+    * HEADER
+    */
+    .logo h1 {
+        font-size: 2.5rem;
+    }
+    
+    .logo span {
+        font-size: 2.5rem;
+    }
+
+    /* 
+    * SEC-2
+    */
+    .sec-2 .container .cards-products .item-card {
+        max-width: 150px;
+        padding: 10px;
+    }
+    .sec-2 .container .cards-products a{
+        padding: 10px 30px;
+    }
+    /* 
+    * SEC-3
+    */
+
+    .sec-3 .card-right img {
+        min-width: 200px;
+    }
+
+    /* 
+    * SEC-4
+    */
+    form {
+        width: 100%;
+    }
+    form .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form input {
+        max-width: 500px;
+        font-size: 1rem;
+    }
+
+    form textarea {
+        font-size: 1rem;
+    }
+
+    form button {
+        font-size: 1rem;
+    }
+    
+    /* 
+    * FOOTER
+    */
+    footer .logo-footer a h1 {
+        font-size: 1.5rem;
+    }
+    footer .logo-footer a h1 span {   
+        font-size: 1.5rem;
+    }
+    footer .container span {
+        font-size: .8rem;
+    }
+}
+
+/* ----------------------------------
+ * MEDIA QUERY 375px
+ * ----------------------------------
+*/
+@media (max-width: 375px) {
+
+    /* 
+    * SEC-1
+    */
+    .sec-1 .card-left img {
+        max-width: 300px;
+        min-width: 100px;
+    }
+
+    /* 
+    * SEC-4
+    */
+    form h2.dados-empresa, .dados-empresa input {
+        display: none;
+    }
+}
+
+/* ----------------------------------
+ * MEDIA QUERY
+ * ----------------------------------
+*/
+/* ----------------------------------
+ * MEDIA QUERY
+ * ----------------------------------
+*/
+/* ----------------------------------
+ * MEDIA QUERY
+ * ----------------------------------
+*/
+/* ----------------------------------
+ * MEDIA QUERY
+ * ----------------------------------
+*/
+/* ----------------------------------
+ * MEDIA QUERY
+ * ----------------------------------
+*/
+/* ----------------------------------
+ * MEDIA QUERY
+ * ----------------------------------
+*/
+/* ----------------------------------
+ * MEDIA QUERY
+ * ----------------------------------
+*/
+/* ----------------------------------
+ * MEDIA QUERY
+ * ----------------------------------
+*/
