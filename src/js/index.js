@@ -34,3 +34,50 @@ function closeSidebar() {
         openSidebar()
     }
 }
+
+
+// Função para permitir apenas números
+function permitirApenasNumeros(event) {
+    if (event.which < 48 || event.which > 57) {
+        event.preventDefault();
+    }
+}
+
+// Adiciona os listeners de evento
+document.getElementById('telefone').addEventListener('keypress', permitirApenasNumeros);
+document.getElementById('celular').addEventListener('keypress', permitirApenasNumeros);
+
+
+// Função para formatar o número de telefone
+function formatarTelefone(input) {
+    let num = input.value.replace(/\D/g, ""); // Remove tudo o que não é dígito
+    num = num.substring(0, 11); // Limita a entrada para não mais que 11 dígitos
+    num = num.replace(/^(\d{2})(\d)/g, "($1) $2"); // Adiciona parênteses em volta dos dois primeiros dígitos
+    num = num.replace(/(\d)(\d{4})$/, "$1-$2"); // Adiciona um hífen antes dos últimos quatro dígitos
+    input.value = num;
+}
+
+// Função para validar o número de telefone
+function validarTelefone(input) {
+    const num = input.value.replace(/\D/g, ""); // Remove tudo o que não é dígito
+    if (num.length < 10) {
+        input.setCustomValidity("Por favor, insira um número de telefone válido com pelo menos 10 dígitos.");
+        return false;
+    } else if (num.length > 11) {
+        input.setCustomValidity("Por favor, insira um número de telefone válido com no máximo 11 dígitos.");
+        return false;
+    }
+    input.value = formatarTelefone(input.value);
+    input.setCustomValidity("");
+    return true;
+}
+
+// Adiciona os listeners de evento
+document.getElementById('telefone').addEventListener('input', function() {
+    formatarTelefone(this);
+    validarTelefone(this);
+});
+document.getElementById('celular').addEventListener('input', function() {
+    formatarTelefone(this);
+    validarTelefone(this);
+});
