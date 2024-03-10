@@ -81,3 +81,14 @@ document.getElementById('celular').addEventListener('input', function() {
     formatarTelefone(this);
     validarTelefone(this);
 });
+
+// Função para desativar o preenchimento automático
+function desativarAutocomplete(input) {
+    input.setAttribute('autocomplete', 'off');
+}
+
+// Adiciona os listeners de evento
+window.addEventListener('load', function() {
+    desativarAutocomplete(document.getElementById('telefone'));
+    desativarAutocomplete(document.getElementById('celular'));
+});
